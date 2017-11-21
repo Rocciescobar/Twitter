@@ -33,7 +33,7 @@ A continuación, una vista de la página:
 
 1. Al presionar enter(/n) que crezca el textarea de acuerdo al tamaño del texto.
 
-### Versión 0.0.5 (Extra)
+#### Versión 0.0.5 (Extra)
 
 1. Agregar la hora en que se publicó el tweet.
 
