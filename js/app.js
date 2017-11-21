@@ -4,6 +4,7 @@ window.addEventListener('load', function() {
   var containerPosts = document.getElementById('container-posts');
   var counter = document.querySelector('.counter');
 
+  // Creando contador 
   catchPost.addEventListener('keyup', function() {
     var postLength = catchPost.value.length;
     var characters = 140 - postLength;
@@ -24,6 +25,7 @@ window.addEventListener('load', function() {
     }  
   });
 
+  // Creando posts
   button.addEventListener('click', function(event) {
     for (var i = 0; i < catchPost.value.length; i++) {
       if (catchPost.value[i] === ' ') {
@@ -31,21 +33,29 @@ window.addEventListener('load', function() {
       } else {
         var post = document.createElement('p');
         post.textContent = catchPost.value;
-        containerPosts.appendChild(post);
+
+        // Agregando formato  de hora
+        post.innerHTML = catchPost.value + '<br>' + moment().format('hh:mm a');
+
         post.classList.add('posts');
+
+        containerPosts.insertBefore(post, containerPosts.firstElementChild);
+
         catchPost.value = '';
+        catchPost.focus();
         counter.textContent = 140;
         counter.className = 'text-color';
         catchPost.style.height = '66px';
       }
     }
   });
-
+  
+  // Textarea ajustable de acuerdo al tamaño del texto
   catchPost.addEventListener('keydown', function() {
     var keyboardEnter = this;
     setTimeout(function() {
-      keyboardEnter.style.cssText = 'height:auto';
-      keyboardEnter.style.cssText = 'height:' + keyboardEnter.scrollHeight + 'px';
+      keyboardEnter.style.height = 'auto';
+      keyboardEnter.style.height = keyboardEnter.scrollHeight + 'px';
     }, 0);
   });
 });

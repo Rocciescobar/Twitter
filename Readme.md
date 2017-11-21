@@ -33,6 +33,10 @@ A continuación, una vista de la página:
 
 1. Al presionar enter(/n) que crezca el textarea de acuerdo al tamaño del texto.
 
+### Versión 0.0.5 (Extra)
+
+1. Agregar la hora en que se publicó el tweet.
+
 ## Especificaciones
 * El archivo index.html contiene la estructura de la página, y se enlaza con dos archivos: main.css y app.js.
 * En la carpeta “css” se almacena el archivo main.css usado para dar estilo y diseño a la página.
@@ -41,3 +45,4 @@ A continuación, una vista de la página:
 * En el archivo Readme.md se explica el contenido de este repositorio.
 * Esta página utiliza la tipografía Rokkitt.
 * La paleta de colores son los siguientes: #6ad2f3, #d6dadc, #004080, # feae22, #e0245e.
+* Para el formato de fecha y hora se usó la librería moment.js.
